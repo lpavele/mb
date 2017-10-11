@@ -1,0 +1,18 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import 'custom';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+$font-primary: 'Roboto', sans-serif;
+// Core
+body {
+  //background: $gray-lighter;
+}
+
+.section__title {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+.section_light {
+  background: #ffffff;
+}
