@@ -20,13 +20,16 @@ body {
 .section_light {
   background: #ffffff;
 }
+#map {
+  height: 300px;
+}
 .land {
 
 }
 .land__title {
   margin: 2rem 0;
   padding-left: 2rem;
-  color: #465c6c;
+  color: $marengo;
 }
 .land__cards .card-body {
   padding: 2.5rem;
@@ -92,6 +95,8 @@ body {
   padding: 0;
   letter-spacing: 1px;
   line-height: 1.1;
+}
+.menu__phone_lg {
   font-size: 1.1rem;
 }
 .menu__phone:hover {

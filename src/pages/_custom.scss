@@ -74,6 +74,7 @@ $grays: (
 ) !default;
 
 $blue:    #107dda !default;
+$marengo: #465c6c !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -86,6 +87,7 @@ $cyan:    #17a2b8 !default;
 
 $colors: (
   blue: $blue,
+  marengo: $marengo,
   indigo: $indigo,
   purple: $purple,
   pink: $pink,
@@ -102,7 +104,7 @@ $colors: (
 
 $theme-colors: (
   primary: $blue,
-  secondary: $gray-600,
+  secondary: $marengo,
   success: $green,
   info: $cyan,
   warning: $yellow,
