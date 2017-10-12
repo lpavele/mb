@@ -1,0 +1,27 @@
+.menu
+    nav.navbar.container.navbar-expand-lg.menu__wrapper
+        a.navbar-brand.menu__brand(href='/')
+            img.d-inline-block.align-top.mr-2(src=require('images/logo.svg') width=30 height=30)
+            | Модуль&middot;Бетон
+        button.navbar-toggler.mt-1(
+        type='button'
+        data-toggle='collapse'
+        data-target='#navbarTogglerId'
+        aria-controls='navbarTogglerId'
+        aria-expanded='false'
+        aria-label='Toggle navigation'
+        )
+            span.fa.fa-bars
+        #navbarTogglerId.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+                li.nav-item.menu__item
+                    a.nav-link.menu__link(href='/') Наша продукция
+                li.nav-item.menu__item
+                    a.nav-link.menu__link(href='#') Доставка
+                li.nav-item.menu__item
+                    a.nav-link.menu__link(href='#') О компании
+                li.nav-item.menu__item
+                    a.nav-link.menu__link(href='/contact.html') Контакты
+            .nav-item.menu__item
+                div.text-center
+                    a.nav-link.d-inline-block.menu__phone(href='tel:+375296933700') +375 (29) 332 22 11

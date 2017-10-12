@@ -119,7 +119,7 @@ $theme-color-interval: 8% !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-rounded:            true !default;
+$enable-rounded:            false !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
@@ -166,7 +166,7 @@ $body-color:    $gray-900 !default;
 $link-color:            theme-color("primary") !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 // Paragraphs
 //
@@ -239,7 +239,8 @@ $transition-collapse:    height .35s ease !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+//$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:  "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
@@ -622,8 +623,8 @@ $jumbotron-bg:                   $gray-200 !default;
 // Cards
 
 $card-spacer-y:            .75rem !default;
-$card-spacer-x:            1.25rem !default;
-$card-border-width:        1px !default;
+$card-spacer-x:            2rem !default;
+$card-border-width:        0px !default;
 $card-border-radius:       $border-radius !default;
 $card-border-color:        rgba($black,.125) !default;
 $card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;

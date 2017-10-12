@@ -1,13 +1,17 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import 'custom';
-@import '../../node_modules/bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/functions";
+@import './custom';
+@import '~bootstrap/scss/bootstrap';
 
-$font-primary: 'Roboto', sans-serif;
-// Core
 body {
-  //background: $gray-lighter;
+  background: #eaeaea;
 }
-
+.btn-round {
+  border-radius: 50px;
+}
+.btn-badge {
+  line-height: 1;
+  margin: 0.1rem;
+}
 .section__title {
   font-size: 3rem;
   font-weight: 300;
@@ -15,4 +19,104 @@ body {
 }
 .section_light {
   background: #ffffff;
+}
+.land {
+
+}
+.land__title {
+  margin: 2rem 0;
+  padding-left: 2rem;
+  color: #465c6c;
+}
+.land__cards .card-body {
+  padding: 2.5rem;
+}
+@media (min-width: 576px){
+  .land__cards .card {
+    border-right: 1px solid $card-border-color;
+  }
+}
+@media (max-width: 576px){
+  .land__cards .card {
+    border-bottom: 1px solid $card-border-color;
+  }
+}
+.menu {
+  background: #ffffff;
+}
+@media (min-width: 992px){
+  .menu__wrapper {
+    height: 100px;
+  }
+}
+.menu__brand {
+  line-height: 1.3;
+  letter-spacing: .5px;
+}
+.menu__item {
+  margin: .5rem auto;
+}
+.menu__link {
+  margin: 0 .5rem;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  i {
+    margin-right: 10px;
+    line-height: 0;
+    color: $blue;
+  }
+}
+.menu__caller {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+.menu__link:hover {
+  color: $blue;
+}
+.menu__link:focus {
+  color: #000000;
+}
+.menu__phone {
+  color: $gray-600;
+  border-bottom: 1px dotted $gray-600;
+  padding: 0;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  font-size: 1.1rem;
+}
+.menu__phone:hover {
+  color: $gray-900;
+  border-bottom-color: $gray-900;
+}
+.hero {
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+  background: no-repeat center / cover;
+  background-image: url('https://www.alfabank.by/upload/iblock/2fa/banners_for_personal_платежныекарты.jpg');
+}
+.hero__block {
+  padding: 6rem 0 12rem;
+  position: relative;
+  z-index: 5;
+}
+.hero:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.4);
+  z-index: 1;
 }

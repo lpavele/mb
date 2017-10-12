@@ -21,7 +21,7 @@ const PATHS = {
 const common = merge({
         entry: {
             index: PATHS.source + '/pages/index/index.js',
-            // blog: PATHS.source + '/pages/blog/blog.js',
+            contact: PATHS.source + '/pages/contact/contact.js',
             // product: PATHS.source + '/pages/product/product.js',
             // products: PATHS.source + '/pages/products/products.js',
             vendors: ["bootstrap"]
@@ -42,11 +42,11 @@ const common = merge({
                 chunks: ['index', 'vendors'],
                 template: PATHS.source + '/pages/index/index.pug'
             }),
-            // new HtmlWebpackPlugin({
-            //     filename: 'blog.html',
-            //     chunks: ['blog', 'vendors'],
-            //     template: PATHS.source + '/pages/blog/blog.pug'
-            // }),
+            new HtmlWebpackPlugin({
+                filename: 'contact.html',
+                chunks: ['contact', 'vendors'],
+                template: PATHS.source + '/pages/contact/contact.pug'
+            }),
             // new HtmlWebpackPlugin({
             //     filename: 'product.html',
             //     chunks: ['product', 'vendors'],

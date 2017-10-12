@@ -6,7 +6,11 @@ module.exports = function () {
                     test: /\.(woff|woff2|eot|ttf|otf)$/,
                     loader: 'file-loader',
                     options: {
-                        name: '../fonts/[name].[ext]'
+                        // Output below the fonts directory
+                        name: './fonts/[name].[ext]',
+                        // Tweak publicPath to fix CSS lookups to take
+                        // the directory into account.
+                        publicPath: '../'
                     }
                 }
             ]

@@ -1,127 +1,39 @@
 extends ../base
-
+block append head
+    title Наша продукция
 block main
-    .menu
-        nav.navbar.container.navbar-expand-lg.menu__wrapper
-            a.navbar-brand.menu__brand(href='#')
-                img.d-inline-block.align-top.mr-2(src=require('images/logo.svg') width=30 height=30)
-                | Модуль&middot;Бетон
-            button.navbar-toggler.mt-1(
-            type='button'
-            data-toggle='collapse'
-            data-target='#navbarTogglerId'
-            aria-controls='navbarTogglerId'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-            )
-                span.fa.fa-bars
-            #navbarTogglerId.collapse.navbar-collapse
-                ul.navbar-nav.mr-auto
-                    li.nav-item.menu__item
-                        a.nav-link.menu__link(href='#') Наша продукция
-                    li.nav-item.menu__item
-                        a.nav-link.menu__link(href='#') Доставка
-                    li.nav-item.menu__item
-                        a.nav-link.menu__link(href='#') О компании
-                    li.nav-item.menu__item
-                        a.nav-link.menu__link(href='#') Контакты
-                .nav-item.menu__item
-                    div.text-center
-                        a.nav-link.d-inline-block.menu__phone(href='tel:+375296933700') +375 (29) 332 22 11
+    include ../../includes/menu/menu
     .hero
         .hero__block
             h1.display-4 Продажа бетона в Минске
             p.lead Подберем лучшую доставку
 
-    mixin submenu(title, items)
-        .submenu
-            h4
-                a.submenu__link(href='#')= title
-            nav.lead.mb-5
-                each item in items
-                    .submenu__item.text-center.px-5.py-3
-                        .submenu__name
-                            =item.name
-                        .submenu__price
-                            =item.price
-                            sup руб.
-                    //a.submenu__link.my-1(href='#')
-                    //    =item.name
+    - var beton_gr = [{name:'М 100', price: 52},{name:'М 150', price: 56},{name:'М 200', price: 60},{name:'М 250', price: 64},{name:'М 300', price: 68}]
+    - var beton_sh = [{name:'М 150', price: 68},{name:'М 200', price: 72},{name:'М 250', price: 76},{name:'М 300', price: 80},{name:'М 350', price: 84},{name:'М 400', price: 88}]
+    - var rastvor = [{name:'М 50'},{name:'М 75'},{name:'М 100'},{name:'М 150'},{name:'М 200'},{name:'М 250'}]
 
+    .container
+        .land
+            h1.land__title Продукция
+            .land__cards.card-group
+                .card
+                    .card-body
+                        h4.card-title.mb-3
+                            a(href='#') Бетон на гравие
+                        p.font-weight-light Гравийный щебень который производится посредством дробления скалистых валунов
+                        each item in beton_gr
+                            a.btn.btn-outline-primary.btn-round.btn-sm.btn-badge(href='#')=item.name
+                .card
+                    .card-body
+                        h4.card-title.mb-3
+                            a(href='#') Бетон на щебне
+                        p.font-weight-light Эпоксидные двухкомпонентные окрасочные композиции для металлических и бетонных поверхностей.
 
-    .section.py-5
-        .container
-            .section__title Продукция
-            .section__body
-                .d-inline-block Бетон с гравием
-                .d-inline-block Бетон с щебнем
-                .d-inline-block Раствор
-
-    .py-5
-    .section
-        .container
-            .row
-                .col-4
-
-    .section.section_light.py-5
-        .container
-            .section__block
-                .row
-                    //.col-10.offset-2.offset-sm-1.col-sm-4
-                    - var beton_gr = [{name:'М 100', price: 52},{name:'М 150', price: 56},{name:'М 200', price: 60},{name:'М 250', price: 64},{name:'М 300', price: 68}]
-                    - var beton_sh = [{name:'М 150', price: 68},{name:'М 200', price: 72},{name:'М 250', price: 76},{name:'М 300', price: 80},{name:'М 350', price: 84},{name:'М 400', price: 88}]
-                    //+submenu('Бетон на гравии',betons)
-                    .col-4
-                        h4.mb-4
-                            a.submenu__link(href='#') Бетон на гравии
-                        table.products
-                            thead
-                                tr
-                                    th Марка
-                                    th Цена
-                            tbody
-                                each item in beton_gr
-                                    tr
-                                        td.products__name=item.name
-                                        td.products__price=item.price
-                                            sup руб.
-                    .col-4
-                        h4.mb-4
-                            a.submenu__link(href='#') Бетон на щебне
-                        table.products
-                            thead
-                                tr
-                                    th Марка
-                                    th Цена
-                            tbody
-                                each item in beton_sh
-                                    tr
-                                        td.products__name=item.name
-                                        td.products__price=item.price
-                                            sup руб.
-                    .col-4
-                        h4.mb-4
-                            a.submenu__link(href='#') Раствор
-                        table.products
-                            thead
-                                tr
-                                    th Марка
-                                    th Цена
-                            tbody
-                                each item in beton_sh
-                                    tr
-                                        td.products__name=item.name
-                                        td.products__price=item.price
-                                            sup руб.
-                    //.col-10.offset-2.offset-sm-0.col-sm-4
-                    //    +submenu('Бетон на щебне',[{name:'М 150'},{name:'М 200'},{name:'М 250'},{name:'М 300'},{name:'М 350'},{name:'М 400'}])
-                    //.col-10.offset-2.offset-sm-0.col-sm-3
-                        +submenu('Раствор (цементный)',[{name:'М 50'},{name:'М 75'},{name:'М 100'},{name:'М 150'},{name:'М 200'},{name:'М 250'}])
-
-    .section.py-5
-        .container
-            .section__title.text-center Услуги
-            .section__block
+                .card
+                    .card-body
+                        h4.card-title.mb-3
+                            a(href='#') Раствор
+                        p.font-weight-light Двухкомпонентные эпоксидные химстойкие шпатлевки и фуги по металлу и бетону, а также для разделки швов кислотоупорной плитки.
 
 
 
