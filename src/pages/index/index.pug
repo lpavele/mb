@@ -8,21 +8,18 @@ block main
             h1.display-4 Продажа бетона в Минске
             p.lead Подберем лучшую доставку
 
-    - var beton_gr = [{name:'М 100', price: 52},{name:'М 150', price: 56},{name:'М 200', price: 60},{name:'М 250', price: 64},{name:'М 300', price: 68}]
-    - var beton_sh = [{name:'М 150', price: 68},{name:'М 200', price: 72},{name:'М 250', price: 76},{name:'М 300', price: 80},{name:'М 350', price: 84},{name:'М 400', price: 88}]
-    - var rastvor = [{name:'М 50'},{name:'М 75'},{name:'М 100'},{name:'М 150'},{name:'М 200'},{name:'М 250'}]
 
     .container
         .land
-            h1.land__title Продукция
+            h1.land__title.pl-5 Продукция
             .land__cards.card-group
                 .card
                     .card-body
                         h4.card-title.mb-3
-                            a(href='#') Бетон на гравие
+                            a(href='graviy_beton.html') Бетон на гравие
                         p.font-weight-light Гравийный щебень который производится посредством дробления скалистых валунов
                         each item in beton_gr
-                            //a.btn.btn-outline-primary.btn-round.btn-badge(href='#')=item.name
+                            a.btn.btn-outline-primary.btn-round.btn-badge(href='#')=item.name
                 .card
                     .card-body
                         h4.card-title.mb-3

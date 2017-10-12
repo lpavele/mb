@@ -22,7 +22,7 @@ const common = merge({
         entry: {
             index: PATHS.source + '/pages/index/index.js',
             contact: PATHS.source + '/pages/contact/contact.js',
-            // product: PATHS.source + '/pages/product/product.js',
+            graviy: PATHS.source + '/pages/products/graviy/graviy.js',
             // products: PATHS.source + '/pages/products/products.js',
             vendors: ["bootstrap"]
         },
@@ -47,16 +47,11 @@ const common = merge({
                 chunks: ['contact', 'vendors'],
                 template: PATHS.source + '/pages/contact/contact.pug'
             }),
-            // new HtmlWebpackPlugin({
-            //     filename: 'product.html',
-            //     chunks: ['product', 'vendors'],
-            //     template: PATHS.source + '/pages/product/product.pug'
-            // }),
-            // new HtmlWebpackPlugin({
-            //     filename: 'products.html',
-            //     chunks: ['products', 'vendors'],
-            //     template: PATHS.source + '/pages/products/products.pug'
-            // }),
+            new HtmlWebpackPlugin({
+                filename: 'graviy_beton.html',
+                chunks: ['graviy', 'vendors'],
+                template: PATHS.source + '/pages/products/graviy/graviy.pug'
+            }),
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery',

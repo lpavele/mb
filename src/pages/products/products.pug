@@ -1,0 +1,29 @@
+extends ../base
+
+block append head
+    title Контакты
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+block main
+    include ../../includes/menu/menu
+
+    .container
+        .card.my-5
+            .card-body.p-5
+                .row
+                    .col-12.col-md-6.p-3
+                        h3.text-secondary Республика Беларусь, 220089, г.Минск, ул. Железнодорожная 27, корп.1 ком.322
+                    .col-12.col-md-6.p-3.font-weight-light
+                        p Мы принимает заказы с 7:00 - 00:00 и без выходных.
+                        p
+                            span.mr-1 Velcom:
+                            a.menu__phone.text-nowrap(href='tel:+375293322211') +375 (29) 332 22 11
+                            br
+                            span.mr-1 Мтс:
+                            a.menu__phone.text-nowrap(href='tel:+375293322212') +375 (29) 332 22 12
+                            br
+                            span.mr-1 Электронная почта:
+                            a.menu__phone.text-nowrap(href='mailto:sales@modulbeton.by') sales@modulbeton.by
+
+            #map
+
+

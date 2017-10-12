@@ -28,11 +28,7 @@ body {
 }
 .land__title {
   margin: 2rem 0;
-  padding-left: 2rem;
   color: $marengo;
-}
-.land__cards .card-body {
-  padding: 2.5rem;
 }
 @media (min-width: 576px){
   .land__cards .card {
@@ -60,6 +56,7 @@ body {
   margin: .5rem auto;
 }
 .menu__link {
+  white-space: nowrap;
   margin: 0 .5rem;
   color: #000000;
   font-size: 14px;
@@ -90,6 +87,7 @@ body {
   color: #000000;
 }
 .menu__phone {
+  white-space: nowrap;
   color: $gray-600;
   border-bottom: 1px dotted $gray-600;
   padding: 0;
