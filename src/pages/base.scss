@@ -1,6 +1,15 @@
 @import "~bootstrap/scss/functions";
 @import './custom';
 @import '~bootstrap/scss/bootstrap';
+html {
+  font-size: 14px;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 16px;
+  }
+}
 
 body {
   background: #eaeaea;
@@ -34,10 +43,27 @@ body {
   .land__cards .card {
     border-right: 1px solid $card-border-color;
   }
+  .card-group-imposition .card-group:not(:first-child){
+    margin-top: -1px;
+  }
+  .btn-buy {
+    visibility: hidden;
+    background: #ffffff;
+  }
 }
 @media (max-width: 576px){
   .land__cards .card {
     border-bottom: 1px solid $card-border-color;
+  }
+  .card-group-imposition .card{
+    margin-top: -1px;
+  }
+  .card-group-imposition .card .btn-buy {
+    border-top: 1px solid $card-border-color;
+    color: black;
+  }
+  .btn-buy {
+    background: $yellow;
   }
 }
 .menu {
@@ -122,4 +148,11 @@ body {
   bottom: 0;
   background: rgba(0,0,0,.4);
   z-index: 1;
+}
+.text-sm {
+  font-size: .95rem;
+}
+.card:hover .btn-buy {
+  visibility: visible;
+  background: $yellow;
 }
