@@ -41,7 +41,7 @@ body {
 }
 @media (min-width: 576px){
   .land__cards .card {
-    border-right: 1px solid $card-border-color;
+    border-right: 1px solid $card-border-color !important;
   }
   .card-group-imposition .card-group:not(:first-child){
     margin-top: -1px;
@@ -53,7 +53,7 @@ body {
 }
 @media (max-width: 576px){
   .land__cards .card {
-    border-bottom: 1px solid $card-border-color;
+    border-bottom: 1px solid $card-border-color !important;
   }
   .card-group-imposition .card{
     margin-top: -1px;
@@ -151,6 +151,9 @@ body {
 }
 .text-sm {
   font-size: .95rem;
+}
+.btn-buy {
+  padding: 1rem 1.5rem;
 }
 .card:hover .btn-buy {
   visibility: visible;
